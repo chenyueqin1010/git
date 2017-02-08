@@ -1,2 +1,26 @@
-git 1
-git 2
+Git 
+1.安装，默认提示即可：https://git-for-windows.github.io
+2.安装后运行Git Bash命令窗
+3.设置名字和邮箱： git config --global user.name "Your Name"
+				   git config --global user.email "email@example.com"
+4.初始化版本库：到某处新建空文件夹，打开后右键：Git Bash Here，输入 $ git init
+5.添加项目文件，如新建readme.txt后，输入 git add readme.txt，先提交到暂缓区，最后同一 git commit -m "注释说明" 
+6. git status 查看仓库当前的状态，文件是否有修改或提交
+7. git diff 查看上次修改过的内容
+8. git log 查看所有提交日志，git log --pretty=oneline（简洁模式）
+9. git reset --hard HEAD^（HEAD^^/HEAD^^^/HEAD~10）,退回到上一次提交的版本
+10. git reset --hard 3628164，还原到指定版本，版本号可以在git reflog查
+11. cat 文件名，查看文档
+12.撤销修改--add前，git checkout --文件名
+13.撤销add，git reset HEAD readme.txt
+14.删除文件，git rm test.txt（工作区文件同步删除，注意是不可恢复的）后 git commit -m "remove test.txt"
+15.工作区删除了文件后可以从版本库中恢复，git checkout -- test.txt
+16.远程仓库：注册github账号后，本地 ssh-keygen -t rsa -C "youremail@example.com"，计算机主用户文件夹会新增.ssh，里面有id_rsa和id_rsa.pub两个文件
+	id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
+17.登陆GitHub，打开“Account settings”，“SSH Keys”页面,点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+18.本地库同步到远程库：github上新建一个库，本地运行 git remote add origin git@github.com:github账户名/learngit.git
+
+
+
+
+
