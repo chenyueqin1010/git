@@ -19,16 +19,27 @@ Git
 	id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 17.登陆GitHub，打开“Account settings”，“SSH Keys”页面,点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
 18.本地库同步到远程库：github上新建一个库，本地运行 git remote add origin git@github.com:chenyueqin1010/gitTest.git,origin为默认，已作默认关联的不能再用，另取
-19.关联后，使用命令git push -u origin master第一次推送master分支的所有内容
-20.此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改
+19.关联后，使用命令git push -u 远程库名 分支名，第一次推送master分支的所有内容
+20.此后，每次本地提交后，只要有必要，就可以使用命令git push 远程库名 分支名，推送最新修改
 21.远程库克隆到本地：git clone git@github.com:chenyueqin1010/gitTest.git
 22.Git鼓励大量使用分支：
 	查看分支：git branch
 	创建分支：git branch <name>
 	切换分支：git checkout <name>
 	创建+切换分支：git checkout -b <name>
-	合并某分支到当前分支：git merge <name>
+	合并某分支到当前分支：git merge <name> 									fast forward 模式
+						  git merge --no-ff -m "merge with no-ff" 分支名	非fast forward模式
 	删除分支：git branch -D <name>
+23.当Git无法自动合并分支时，就必须首先解决冲突，再提交合并
+	用git log --graph命令可以看到分支合并图
+24. git remote查看远程库，git remote -v 详细信息
+25. 多人协作：·查看远程库信息，使用git remote -v；
+	·本地新建的分支如果不推送到远程，对其他人就是不可见的；
+	·从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+	·在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+	·建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+	·从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+
 
 
 
