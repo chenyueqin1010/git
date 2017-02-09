@@ -19,6 +19,14 @@ Git
 	id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。
 17.登陆GitHub，打开“Account settings”，“SSH Keys”页面,点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
 18.本地库同步到远程库：github上新建一个库，本地运行 git remote add origin git@github.com:github账户名/learngit.git
+19.远程库克隆到本地：git clone git@github.com:chenyueqin1010/gitTest.git
+20.Git鼓励大量使用分支：
+	查看分支：git branch
+	创建分支：git branch <name>
+	切换分支：git checkout <name>
+	创建+切换分支：git checkout -b <name>
+	合并某分支到当前分支：git merge <name>
+	删除分支：git branch -D <name>
 
 
 
