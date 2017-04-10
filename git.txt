@@ -1,4 +1,4 @@
-Git 
+﻿Git 
 1.安装，默认提示即可：https://git-for-windows.github.io
 2.安装后运行Git Bash命令窗
 3.设置名字和邮箱： git config --global user.name "Your Name"
@@ -41,6 +41,17 @@ Git
 	·从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
 
 
+GitPages远程部署：
+1.新建一个库，选初始化（包含一个readme）
+2.进入库，settings
+3.source那选master branch
+4.电脑某处复制项目到本地，右键git bash here：git clone git@github.com:chenyueqin1010/库名.git
+5.复制本地项目到该目录
+6.关联远程库：git remote add 起个名 git@github.com:chenyueqin1010/库名.git
+7.本地添加所有文件：git add .
+8.提交：git commit -m "修改信息"
+9.git pull
+10.git push
 
 
 
