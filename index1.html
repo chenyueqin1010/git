@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>git简洁教程</title>
+    <style>
+        body{
+            text-indent:2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Git & GitHub Pages简单教程</h1>
+    <h5>1.安装，默认提示即可：https://git-for-windows.github.io</h5>
+    <h5>2.安装后运行Git Bash命令窗</h5>
+    <h5>3.设置名字和邮箱： git config --global user.name "Your Name"</h5>
+    <h5 style="text-indent: 12em;">git config --global user.email "email@example.com"</h5>
+    <h5>4.远程仓库：注册github账号后，本地 ssh-keygen -t rsa -C "youremail@example.com"，计算机主用户文件夹会新增.ssh，里面有id_rsa和id_rsa.pub两个文件</h5>
+	<h5>（新版的git要起个名，可起id_rsa，密码不输为空，在当前文件夹生成的两个文件复制到用户根目录C:\Users\chenyueqin下即可）</h5>
+    <h5 style="text-indent: 4em;">id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人。</h5>
+    <h5>5.登陆GitHub，打开“Account settings”，“SSH and GPG Keys”页面,点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容</h5>
+    <h5>6.本地库同步到远程库：github上新建一个库，本地运行 git remote add origin git@github.com:chenyueqin1010/gitTest.git,origin为默认，已作默认关联的不能再用，另取</h5>
+    <h2>GitPages远程部署：</h2>
+    <h5>1.新建一个库，选初始化（包含一个readme）</h5>
+    <h5>2.进入库，settings</h5>
+    <h5>3.source那选master branch</h5>
+    <h5>4.电脑某处复制项目到本地，右键git bash here：git clone git@github.com:chenyueqin1010/库名.git</h5>
+    <h5>5.复制本地项目到该目录</h5>
+    <h5>6.关联远程库：git remote add 起个名 git@github.com:chenyueqin1010/库名.git</h5>
+    <h5>7.本地添加所有文件：git add .(注意 . 前面有空格)</h5>
+    <h5>8.提交：git commit -m "修改信息"</h5>
+    <h5>9.git pull</h5>
+    <h5>10.git push</h5>
+	<br/>
+	<h2><a href="index2.html">git命令详细版</a></h2>
+</body>
+</html>
